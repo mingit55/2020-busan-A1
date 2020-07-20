@@ -78,7 +78,7 @@ a, a:hover { text-decoration: none; color: inherit; }
 
 /* 헤더 영역 */
 #top {
-    position: sticky;
+    position: fixed;
     left: 0; top: 0;
     width: 100%;
     height: 40px;
