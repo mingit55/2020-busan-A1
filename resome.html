@@ -1,0 +1,226 @@
+<!-- 이력서 관리 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전북중소기업취업박람회</title>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="./fontawesome-free-5.1.0-web/css/all.css">
+    <script src="./fontawesome-free-5.1.0-web/js/all.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resome.css">
+</head>
+<body>
+    <div class="workspace">
+        <!-- 헤더 영역 -->
+        <div id="top">
+            <div class="container d-flex justify-content-between h-100">
+                <div class="sotial">
+                    <a href="#" class="s-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="s-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="s-icon">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </div>
+                <div class="auth">
+                    <a href="#">로그인</a>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="container d-flex align-items-center justify-content-between h-100">
+                <a href="./index.html" class="logo">전북중소기업취업박람회</a>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#">전북중소기업취업박람회</a>
+                        <div class="sub-list">
+                            <a href="#">행사소개</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">기업 회원</a>
+                        <div class="sub-list">
+                            <a href="#">채용 등록</a>
+                            <a href="#">면접 등록</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">개인 회원</a>
+                        <div class="sub-list">
+                            <a href="./resome.html">이력서 관리</a>
+                            <a href="./interview.html">면접 요청</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /헤더 영역 -->
+    
+        <!-- 이력서 -->
+        <div class="resome">
+            <div class="resome__container">
+                <h1 class="resome__title">이력서</h1>
+                <!-- 인적 사항 -->
+                <table class="resome__table">
+                    <tbody>
+                        <tr>
+                            <td class="resome__image" rowspan="4">
+                                <input type="file" id="profile" hidden>
+                                <small class="d-inline-block mb-2 text-muted">등록된 사진이 없습니다</small>
+                                <label for="profile">사진 등록</label>
+                            </td>
+                            <td class="resome__label">이 름</td>
+                            <td class="resome__input"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="resome__label">생 년 월 일</td>
+                            <td class="resome__input"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="resome__label">연 락 처</td>
+                            <td class="resome__input"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="resome__label">이 메 일</td>
+                            <td class="resome__input"><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /인적 사항 -->
+                <!-- 학력 사항 -->
+                <table class="resome__table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="resome__label">학 력 사 항</td>
+                            <td class="resome__head">재학 기간</td>
+                            <td class="resome__head">구분(재학/졸업)</td>
+                            <td class="resome__head">학교명</td>
+                            <td class="resome__head">전공</td>
+                            <td class="resome__head">학점</td>
+                            <td class="resome__head">삭제</td>
+                        </tr>
+                        <tr>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__input">
+                                <select name="type" id="edu_Type">
+                                    <option value="재학">재학</option>
+                                    <option value="졸업">졸업</option>
+                                </select>
+                            </td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__remove">
+                                <button class="btn-remove">삭제 <i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resome__add" colspan="6">
+                                <button class="btn-add">추가 <i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /학력 사항 -->
+                <!-- 경력 사항 -->
+                <table class="resome__table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="resome__label">경 력 사 항</td>
+                            <td class="resome__head">회사명</td>
+                            <td class="resome__head">재직기간</td>
+                            <td class="resome__head">직급</td>
+                            <td class="resome__head">삭제</td>
+                        </tr>
+                        <tr>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__duration">
+                                <input type="month"> ~ <input type="month">
+                            </td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__remove">
+                                <button class="btn-remove">삭제 <i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resome__add" colspan="4">
+                                <button class="btn-add">추가 <i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /경력 사항 -->
+                <!-- 대외 활동 -->
+                <table class="resome__table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="resome__label">대 외 활 동</td>
+                            <td class="resome__head">기간</td>
+                            <td class="resome__head">기관/장소</td>
+                            <td class="resome__head">내용</td>
+                            <td class="resome__head">삭제</td>
+                        </tr>
+                        <tr>
+                            <td class="resome__duration">
+                                <input type="month"> ~ <input type="month">
+                            </td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__remove">
+                                <button class="btn-remove">삭제 <i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resome__add" colspan="4">
+                                <button class="btn-add">추가 <i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /대외 활동 -->
+                <!-- 자격증/어학 -->
+                <table class="resome__table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="resome__label">자 격 증</td>
+                            <td class="resome__head">취득일</td>
+                            <td class="resome__head">구분(자격증/어학)</td>
+                            <td class="resome__head">자격/어학명</td>
+                            <td class="resome__head">발행처</td>
+                            <td class="resome__head">삭제</td>
+                        </tr>
+                        <tr>
+                            <td class="resome__input"><input type="date"></td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__input">
+                                <select name="type" id="lic_type">
+                                    <option value="자격증">자격증</option>
+                                    <option value="어학">어학</option>
+                                </select>
+                            </td>
+                            <td class="resome__input"><input type="text"></td>
+                            <td class="resome__remove">
+                                <button class="btn-remove">삭제 <i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resome__add" colspan="5">
+                                <button class="btn-add">추가 <i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /자격증/어학 -->
+            </div>
+        </div>
+        <!-- /이력서 -->
+    </div>
+</body>
